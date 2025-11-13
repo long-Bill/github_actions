@@ -7,18 +7,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
-         uses: actions/setup-python@v4
-         with:
-           python-version: '3.10'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
       - name: Install dependencies
-          run: |
-            pip install -r requirements.txt
-            pip install safety bandit
+        run: |
+          pip install -r requirements.txt
+          pip install safety bandit
       - name: Run Tests
-          run: pytest tests/
+        run: pytest tests/
       - name: Security Check 1 - Dependency Scan
-          run: |
-          echo "￿ Checking for vulnerable dependencies..."
+        run: |
+          echo "Checking for vulnerable dependencies..."
           safety check
         continue-on-error: true
       - name: Security Check 2 - Code Security Scan
