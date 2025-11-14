@@ -24,3 +24,4 @@ if __name__ == "__main__":
     print("Addition of 2 and 6 is:", add(2, 6))
     print("Subtraction of 6 from 10 is:", subtract(10, 6))
     print("Subtraction of 7 from 10 is:", subtract(10, 7))
+    print("Subtraction of 7 from 10 is:", subtract(10, 7))
